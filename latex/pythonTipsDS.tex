@@ -35,14 +35,8 @@
 % Set up styles of URL: it should be placed after hyperref.
 \urlstyle{same}
 
-\addto\captionsenglish{\renewcommand{\figurename}{Fig.\@ }}
-\makeatletter
-\def\fnum@figure{\figurename\thefigure{}}
-\makeatother
-\addto\captionsenglish{\renewcommand{\tablename}{Table }}
-\makeatletter
-\def\fnum@table{\tablename\thetable{}}
-\makeatother
+\addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
+\addto\captionsenglish{\renewcommand{\tablename}{Table}}
 \addto\captionsenglish{\renewcommand{\literalblockname}{Listing}}
 
 \addto\captionsenglish{\renewcommand{\literalblockcontinuedname}{continued from previous page}}
@@ -100,11 +94,11 @@
 \begin{document}
 
 \pagestyle{empty}
-\sphinxmaketitle
+\maketitle
 \pagestyle{plain}
 \sphinxtableofcontents
 \pagestyle{normal}
-\phantomsection\label{\detokenize{index::doc}}\begin{quote}
+\phantomsection\label{\detokenize{index::doc}}\phantomsection\label{\detokenize{index:index}}\begin{quote}
 
 \begin{figure}[htbp]
 \centering
@@ -320,6 +314,7 @@ Be mindful of guarding against harm from others, and stay away from placing harm
 
 If you are a real Data Scientist, you have to share your code with your colleagues or release your code for Code Review or Quality assurance(QA). You will definitely do not want to have your \sphinxcode{\sphinxupquote{User Information}} in the code. So you can save them in login.txt in a safe folder:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 runawayhorse001
 PythonTips
@@ -327,6 +322,7 @@ PythonTips
 
 and use the following code to import your \sphinxcode{\sphinxupquote{User Information}}:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{}User Information}
 \PYG{k}{try}\PYG{p}{:}
@@ -340,6 +336,7 @@ and use the following code to import your \sphinxcode{\sphinxupquote{User Inform
 
 You may also want to get the \sphinxcode{\sphinxupquote{User Information}} by using \sphinxcode{\sphinxupquote{os.environ}} in \sphinxcode{\sphinxupquote{Python}}:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k}{try}\PYG{p}{:}
     \PYG{n}{user} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{environ}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{LOGNAME}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
@@ -369,6 +366,7 @@ Single asterisk as used in function declaration allows variable number of argume
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{my\PYGZus{}list} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{]}
 \PYG{k}{print}\PYG{p}{(}\PYG{n}{my\PYGZus{}list}\PYG{p}{)}
@@ -379,6 +377,7 @@ Single asterisk as used in function declaration allows variable number of argume
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{]}
 \PYG{l+m+mi}{1} \PYG{l+m+mi}{2} \PYG{l+m+mi}{3}
@@ -391,6 +390,7 @@ Single asterisk as used in function declaration allows variable number of argume
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k}{print}\PYG{p}{(}\PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{)}\PYG{p}{)}
 \PYG{k}{print}\PYG{p}{(}\PYG{o}{*}\PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{)}\PYG{p}{)}
@@ -401,6 +401,7 @@ Single asterisk as used in function declaration allows variable number of argume
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{)}
 \PYG{l+m+mi}{0} \PYG{l+m+mi}{1} \PYG{l+m+mi}{2} \PYG{l+m+mi}{3} \PYG{l+m+mi}{4}
@@ -430,6 +431,7 @@ More details can be found at:
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k+kn}{import} \PYG{n+nn}{random}
 \PYG{n}{random}\PYG{o}{.}\PYG{n}{random}\PYG{p}{(}\PYG{p}{)}
@@ -442,6 +444,7 @@ More details can be found at:
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mf}{0.33844051243073625}
 \PYG{l+m+mf}{7.772024014335885}
@@ -454,6 +457,7 @@ More details can be found at:
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{random\PYGZus{}sample}\PYG{p}{(}\PYG{p}{)}
 \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{random\PYGZus{}sample}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
@@ -468,6 +472,7 @@ More details can be found at:
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mf}{0.11919402208670005}
 \PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mf}{0.07384755}\PYG{p}{,} \PYG{l+m+mf}{0.9005251} \PYG{p}{,} \PYG{l+m+mf}{0.30030561}\PYG{p}{,} \PYG{l+m+mf}{0.38221819}\PYG{p}{]}\PYG{p}{)}
@@ -487,6 +492,7 @@ Sometimes, we really do not need the scientific decimals for \sphinxcode{\sphinx
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{np}\PYG{o}{.}\PYG{n}{round}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{random\PYGZus{}sample}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{]}\PYG{p}{)}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{)}
 \end{sphinxVerbatim}
@@ -495,6 +501,7 @@ Sometimes, we really do not need the scientific decimals for \sphinxcode{\sphinx
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mf}{0.76}\PYG{p}{,} \PYG{l+m+mf}{0.06}\PYG{p}{,} \PYG{l+m+mf}{0.41}\PYG{p}{,} \PYG{l+m+mf}{0.4} \PYG{p}{]}\PYG{p}{,}
        \PYG{p}{[}\PYG{l+m+mf}{0.07}\PYG{p}{,} \PYG{l+m+mf}{0.51}\PYG{p}{,} \PYG{l+m+mf}{0.84}\PYG{p}{,} \PYG{l+m+mf}{0.76}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
@@ -506,48 +513,56 @@ Sometimes, we really do not need the scientific decimals for \sphinxcode{\sphinx
 \label{\detokenize{primer:todo}}
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 
 \end{sphinxVerbatim}
 
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 
 \end{sphinxVerbatim}
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 
 \end{sphinxVerbatim}
 
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 
 \end{sphinxVerbatim}
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 
 \end{sphinxVerbatim}
 
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 
 \end{sphinxVerbatim}
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 
 \end{sphinxVerbatim}
 
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 
 \end{sphinxVerbatim}
@@ -580,6 +595,7 @@ The empty list is used to initialize a list.
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{my\PYGZus{}list} \PYG{o}{=} \PYG{p}{[}\PYG{p}{]}
 \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{my\PYGZus{}list}\PYG{p}{)}
@@ -589,6 +605,7 @@ The empty list is used to initialize a list.
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nb}{list}
 \end{sphinxVerbatim}
@@ -600,6 +617,7 @@ optimal number of the clusters.
 \sphinxcode{\sphinxupquote{:: Example:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{min\PYGZus{}cluster} \PYG{o}{=} \PYG{l+m+mi}{3}
 \PYG{n}{max\PYGZus{}cluster} \PYG{o}{=}\PYG{l+m+mi}{8}
@@ -618,6 +636,7 @@ optimal number of the clusters.
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{p}{[}\PYG{l+m+mf}{0.16}\PYG{p}{,} \PYG{l+m+mf}{0.2}\PYG{p}{,} \PYG{l+m+mf}{0.3}\PYG{p}{,} \PYG{l+m+mf}{0.87}\PYG{p}{,} \PYG{l+m+mf}{0.59}\PYG{p}{]}
 \end{sphinxVerbatim}
@@ -629,6 +648,7 @@ optimal number of the clusters.
 \sphinxcode{\sphinxupquote{:: Example:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{num} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{l+m+mi}{6}\PYG{p}{,}\PYG{l+m+mi}{7}\PYG{p}{,}\PYG{l+m+mi}{8}\PYG{p}{,}\PYG{l+m+mi}{9}\PYG{p}{,}\PYG{l+m+mi}{10}\PYG{p}{]}
 \PYG{k}{print}\PYG{p}{(}\PYG{o}{*}\PYG{n}{num}\PYG{p}{)}
@@ -638,6 +658,7 @@ optimal number of the clusters.
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{1} \PYG{l+m+mi}{2} \PYG{l+m+mi}{3} \PYG{l+m+mi}{4} \PYG{l+m+mi}{5} \PYG{l+m+mi}{6} \PYG{l+m+mi}{7} \PYG{l+m+mi}{8} \PYG{l+m+mi}{9} \PYG{l+m+mi}{10}
 \end{sphinxVerbatim}
@@ -760,6 +781,7 @@ A tuple is an assortment of data, separated by commas, which makes it similar to
 \sphinxcode{\sphinxupquote{:: Example:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{col\PYGZus{}names} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{name}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Age}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Sex}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Car}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
 \PYG{n}{col\PYGZus{}values} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Michael}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{30}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Male}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Honda}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tesla}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{]}
@@ -777,6 +799,7 @@ A tuple is an assortment of data, separated by commas, which makes it similar to
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{name}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Michael}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Age}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{30}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Sex}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Male}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Car}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Honda}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tesla}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{\PYGZcb{}}
       \PYG{n}{name} \PYG{n}{Age}   \PYG{n}{Sex}    \PYG{n}{Car}
@@ -793,6 +816,7 @@ When \sphinxcode{\sphinxupquote{get()}} is called, Python checks if the specifie
 \sphinxcode{\sphinxupquote{:: Example:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{data1} \PYG{o}{=} \PYG{n}{d}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{name}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{best}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
 \PYG{n}{data2} \PYG{o}{=} \PYG{n}{d}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{names}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{George}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
@@ -804,6 +828,7 @@ When \sphinxcode{\sphinxupquote{get()}} is called, Python checks if the specifie
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{Michael}
 \PYG{n}{George}
@@ -816,6 +841,7 @@ When \sphinxcode{\sphinxupquote{get()}} is called, Python checks if the specifie
 \sphinxcode{\sphinxupquote{:: Example:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k}{print}\PYG{p}{(}\PYG{p}{[}\PYG{p}{(}\PYG{n}{key}\PYG{p}{,} \PYG{n}{val}\PYG{p}{)} \PYG{k}{for} \PYG{n}{key}\PYG{p}{,} \PYG{n}{val} \PYG{o+ow}{in} \PYG{n}{d}\PYG{o}{.}\PYG{n}{items}\PYG{p}{(}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}
 \end{sphinxVerbatim}
@@ -824,6 +850,7 @@ When \sphinxcode{\sphinxupquote{get()}} is called, Python checks if the specifie
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{p}{[}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{name}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Michael}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Age}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{30}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Sex}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Male}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Car}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Honda}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tesla}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}\PYG{p}{]}
 \end{sphinxVerbatim}
@@ -842,6 +869,7 @@ Replace values in dict
 \sphinxcode{\sphinxupquote{:: Example:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{replace} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Car}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tesla S}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tesla X}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{\PYGZcb{}}
 \PYG{k}{print}\PYG{p}{(}\PYG{n}{d}\PYG{p}{)}
@@ -853,6 +881,7 @@ Replace values in dict
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{name}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Michael}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Age}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{30}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Sex}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Male}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Car}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Honda}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tesla}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{\PYGZcb{}}
 \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{name}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Michael}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Age}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{30}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Sex}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Male}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Car}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tesla S}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tesla X}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{\PYGZcb{}}
@@ -867,6 +896,7 @@ Add key and values in dict
 \sphinxcode{\sphinxupquote{:: Example:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} add key and values in dict}
 \PYG{n}{added} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Kid}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tom}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Jim}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{\PYGZcb{}}
@@ -879,6 +909,7 @@ Add key and values in dict
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{name}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Michael}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Age}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{30}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Sex}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Male}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Car}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tesla S}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tesla X}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{\PYGZcb{}}
 \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{name}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Michael}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Age}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{30}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Sex}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Male}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Car}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tesla S}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tesla X}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Kid}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tom}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Jim}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{\PYGZcb{}}
@@ -894,6 +925,7 @@ Add key and values in dict
 \sphinxcode{\sphinxupquote{:: Example:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} update keys in dict}
 \PYG{n}{mapping} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Car}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Cars}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Kid}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Kids}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}}
@@ -905,6 +937,7 @@ Add key and values in dict
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{name}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Michael}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Age}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{30}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Sex}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Male}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Car}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tesla S}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tesla X}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Kid}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tom}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Jim}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{\PYGZcb{}}
 \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{name}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Michael}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Age}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{30}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Sex}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Male}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Cars}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tesla S}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tesla X}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Kids}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tom}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Jim}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{\PYGZcb{}}
@@ -920,6 +953,7 @@ Add key and values in dict
 \sphinxcode{\sphinxupquote{::syntax:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{p}{[} \PYG{n}{RESUT} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n}{seq} \PYG{k}{if} \PYG{n}{COND} \PYG{p}{]}
 \end{sphinxVerbatim}
@@ -928,6 +962,7 @@ Add key and values in dict
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{num} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{l+m+mi}{6}\PYG{p}{,}\PYG{l+m+mi}{7}\PYG{p}{,}\PYG{l+m+mi}{8}\PYG{p}{,}\PYG{l+m+mi}{9}\PYG{p}{,}\PYG{l+m+mi}{10}\PYG{p}{]}
 
@@ -938,6 +973,7 @@ Add key and values in dict
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{]}
 \end{sphinxVerbatim}
@@ -949,6 +985,7 @@ Add key and values in dict
 \sphinxcode{\sphinxupquote{::syntax:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{p}{[} \PYG{n}{RESUT1} \PYG{k}{if} \PYG{n}{COND1}  \PYG{k}{else} \PYG{n}{RESUT2} \PYG{k}{if} \PYG{n}{COND2} \PYG{k}{else} \PYG{n}{RESUT3} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n}{seq}\PYG{p}{]}
 \end{sphinxVerbatim}
@@ -957,6 +994,7 @@ Add key and values in dict
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{num} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{l+m+mi}{6}\PYG{p}{,}\PYG{l+m+mi}{7}\PYG{p}{,}\PYG{l+m+mi}{8}\PYG{p}{,}\PYG{l+m+mi}{9}\PYG{p}{,}\PYG{l+m+mi}{10}\PYG{p}{]}
 
@@ -967,6 +1005,7 @@ Add key and values in dict
 \sphinxcode{\sphinxupquote{:: Ouput:}}
 \begin{quote}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Low}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
  \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Low}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
@@ -989,6 +1028,7 @@ Add key and values in dict
 
 \section{Data Ingestion from Local to DataBase}
 \label{\detokenize{ingest:data-ingestion-from-local-to-database}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} User Information}
 \PYG{k}{try}\PYG{p}{:}
@@ -1047,6 +1087,7 @@ Add key and values in dict
 \begin{sphinxadmonition}{note}{Note:}
 You can also use \sphinxcode{\sphinxupquote{copy\_to}} to copy the dataframe from local memory to GP
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{cur}\PYG{o}{.}\PYG{n}{copy\PYGZus{}to}\PYG{p}{(}\PYG{n}{df}\PYG{p}{,} \PYG{n}{table\PYGZus{}name}\PYG{p}{)}
 \end{sphinxVerbatim}
@@ -1055,6 +1096,7 @@ You can also use \sphinxcode{\sphinxupquote{copy\_to}} to copy the dataframe fro
 
 \section{Data Read from DataBase to Local}
 \label{\detokenize{ingest:data-read-from-database-to-local}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} User information}
 \PYG{k}{try}\PYG{p}{:}
@@ -1120,6 +1162,7 @@ This Chapter {\hyperref[\detokenize{nb:nb}]{\sphinxcrossref{\DUrole{std,std-ref}
 
 \subsection{From List}
 \label{\detokenize{pdrdd:from-list}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{my\PYGZus{}list} \PYG{o}{=} \PYG{p}{[}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{a}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{c}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{]}\PYG{p}{]}
 \PYG{n}{col\PYGZus{}name} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{C}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
@@ -1127,6 +1170,7 @@ This Chapter {\hyperref[\detokenize{nb:nb}]{\sphinxcrossref{\DUrole{std,std-ref}
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} caution for the columns=}
 \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{n}{my\PYGZus{}list}\PYG{p}{,}\PYG{n}{columns}\PYG{o}{=} \PYG{n}{col\PYGZus{}name}\PYG{p}{)}
@@ -1136,6 +1180,7 @@ This Chapter {\hyperref[\detokenize{nb:nb}]{\sphinxcrossref{\DUrole{std,std-ref}
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                   \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                   \PYG{o}{\textbar{}}  \PYG{n}{A}\PYG{o}{\textbar{}}  \PYG{n}{B}\PYG{o}{\textbar{}}  \PYG{n}{C}\PYG{o}{\textbar{}}
@@ -1152,6 +1197,7 @@ Pay attentation to the parameter \sphinxcode{\sphinxupquote{columns=}} in \sphin
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} caution for the columns=}
 \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{n}{my\PYGZus{}list}\PYG{p}{,} \PYG{n}{columns}\PYG{o}{=} \PYG{n}{col\PYGZus{}name}\PYG{p}{)}
@@ -1161,6 +1207,7 @@ Pay attentation to the parameter \sphinxcode{\sphinxupquote{columns=}} in \sphin
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
    \PYG{n}{A}  \PYG{n}{B}  \PYG{n}{C}             \PYG{l+m+mi}{0}  \PYG{l+m+mi}{1}  \PYG{l+m+mi}{2}
 \PYG{l+m+mi}{0}  \PYG{n}{a}  \PYG{l+m+mi}{1}  \PYG{l+m+mi}{2}          \PYG{n}{A}  \PYG{n}{a}  \PYG{l+m+mi}{1}  \PYG{l+m+mi}{2}
@@ -1173,6 +1220,7 @@ Pay attentation to the parameter \sphinxcode{\sphinxupquote{columns=}} in \sphin
 
 \subsection{From Dict}
 \label{\detokenize{pdrdd:from-dict}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{d} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,}
      \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,}
@@ -1181,6 +1229,7 @@ Pay attentation to the parameter \sphinxcode{\sphinxupquote{columns=}} in \sphin
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{n}{d}\PYG{p}{)}\PYG{k}{for}
 \PYG{c+c1}{\PYGZsh{} Tedious for PySpark}
@@ -1189,6 +1238,7 @@ Pay attentation to the parameter \sphinxcode{\sphinxupquote{columns=}} in \sphin
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                    \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                    \PYG{o}{\textbar{}}  \PYG{n}{A}\PYG{o}{\textbar{}}  \PYG{n}{B}\PYG{o}{\textbar{}}  \PYG{n}{C}\PYG{o}{\textbar{}}
@@ -1208,6 +1258,7 @@ Pay attentation to the parameter \sphinxcode{\sphinxupquote{columns=}} in \sphin
 Most of time, you need to share your code with your colleagues or release your code for Code Review or Quality assurance(QA). You will definitely do not want to have your \sphinxcode{\sphinxupquote{User Information}} in the code. So you can save them
 in login.txt:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 runawayhorse001
 PythonTips
@@ -1215,6 +1266,7 @@ PythonTips
 
 and use the following code to import your \sphinxcode{\sphinxupquote{User Information}}:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{}User Information}
 \PYG{k}{try}\PYG{p}{:}
@@ -1233,6 +1285,7 @@ and use the following code to import your \sphinxcode{\sphinxupquote{User Inform
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{conn} \PYG{o}{=} \PYG{n}{psycopg2}\PYG{o}{.}\PYG{n}{connect}\PYG{p}{(}\PYG{n}{host}\PYG{o}{=}\PYG{n}{host}\PYG{p}{,} \PYG{n}{database}\PYG{o}{=}\PYG{n}{db\PYGZus{}name}\PYG{p}{,} \PYG{n}{user}\PYG{o}{=}\PYG{n}{user}\PYG{p}{,} \PYG{n}{password}\PYG{o}{=}\PYG{n}{pw}\PYG{p}{)}
 \PYG{n}{cur} \PYG{o}{=} \PYG{n}{conn}\PYG{o}{.}\PYG{n}{cursor}\PYG{p}{(}\PYG{p}{)}
@@ -1244,6 +1297,7 @@ and use the following code to import your \sphinxcode{\sphinxupquote{User Inform
 \PYG{n}{dp} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{read\PYGZus{}sql}\PYG{p}{(}\PYG{n}{sql}\PYG{p}{,} \PYG{n}{conn}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} connect to database}
 \PYG{n}{url} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{jdbc:postgresql://}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{+}\PYG{n}{host}\PYG{o}{+}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{:5432/}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{+}\PYG{n}{db\PYGZus{}name}\PYG{o}{+}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{?user=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{+}\PYG{n}{user}\PYG{o}{+}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZam{}password=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{+}\PYG{n}{pw}
@@ -1260,6 +1314,7 @@ Reading tables from Database with PySpark needs the proper drive for the corresp
 \label{\detokenize{pdrdd:from-csv}}
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} pd.DataFrame dp: DataFrame pandas}
 \PYG{n}{dp} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{read\PYGZus{}csv}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Advertising.csv}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
@@ -1277,6 +1332,7 @@ Reading tables from Database with PySpark needs the proper drive for the corresp
 \label{\detokenize{pdrdd:from-json}}
 Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{read\PYGZus{}json}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{data/data.json}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
 \PYG{n}{ds} \PYG{o}{=} \PYG{n}{spark}\PYG{o}{.}\PYG{n}{read}\PYG{o}{.}\PYG{n}{json}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{data/data.json}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
@@ -1284,6 +1340,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{p}{[}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{id}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{timestamp}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{]}\PYG{o}{.}\PYG{n}{head}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1292,6 +1349,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                                 \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                                 \PYG{o}{\textbar{}}        \PYG{n+nb}{id}\PYG{o}{\textbar{}}          \PYG{n}{timestamp}\PYG{o}{\textbar{}}
@@ -1309,6 +1367,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 \label{\detokenize{pdrdd:first-n-rows}}
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{o}{.}\PYG{n}{head}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1317,6 +1376,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                         \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                         \PYG{o}{\textbar{}}   \PYG{n}{TV}\PYG{o}{\textbar{}}\PYG{n}{Radio}\PYG{o}{\textbar{}}\PYG{n}{Newspaper}\PYG{o}{\textbar{}}\PYG{n}{Sales}\PYG{o}{\textbar{}}
@@ -1334,6 +1394,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 \label{\detokenize{pdrdd:column-names}}
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{o}{.}\PYG{n}{columns}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1342,6 +1403,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{Index}\PYG{p}{(}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{TV}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Radio}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Newspaper}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Sales}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{,} \PYG{n}{dtype}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{object}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{TV}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Radio}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Newspaper}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Sales}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
@@ -1352,6 +1414,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 \label{\detokenize{pdrdd:data-types}}
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{o}{.}\PYG{n}{dtypes}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1360,6 +1423,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{TV}           \PYG{n}{float64}                    \PYG{p}{[}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{TV}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{double}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{,}
 \PYG{n}{Radio}        \PYG{n}{float64}                     \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Radio}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{double}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{,}
@@ -1371,6 +1435,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
 \section{Replace Data types}
 \label{\detokenize{pdrdd:replace-data-types}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{my\PYGZus{}list} \PYG{o}{=} \PYG{p}{[}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{a}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{)}\PYG{p}{,}
            \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{)}\PYG{p}{,}
@@ -1387,6 +1452,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 \PYG{n}{dp}\PYG{o}{.}\PYG{n}{dtypes}
 \end{sphinxVerbatim}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{col1}    \PYG{n+nb}{object}
 \PYG{n}{col2}     \PYG{n}{int64}
@@ -1396,6 +1462,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{d} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{col2}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{string}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{col3}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{string}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}}
 \PYG{n}{dp} \PYG{o}{=} \PYG{n}{dp}\PYG{o}{.}\PYG{n}{astype}\PYG{p}{(}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{col2}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{str}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{col3}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{str}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}}\PYG{p}{)}
@@ -1405,6 +1472,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{col1}    \PYG{n+nb}{object}
 \PYG{n}{col2}    \PYG{n+nb}{object}           \PYG{p}{[}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{col1}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{string}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{col2}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{string}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{col3}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{string}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{]}
@@ -1415,6 +1483,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
 \section{Fill Null}
 \label{\detokenize{pdrdd:fill-null}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{my\PYGZus{}list} \PYG{o}{=} \PYG{p}{[}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{a}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n+nb+bp}{None}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{c}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{]}\PYG{p}{]}
 \PYG{n}{dp} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{n}{my\PYGZus{}list}\PYG{p}{,}\PYG{n}{columns}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{C}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
@@ -1426,6 +1495,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                         \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                         \PYG{o}{\textbar{}}     \PYG{n}{A}\PYG{o}{\textbar{}}  \PYG{n}{B}\PYG{o}{\textbar{}}   \PYG{n}{C}\PYG{o}{\textbar{}}
@@ -1438,6 +1508,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{o}{.}\PYG{n}{fillna}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{99}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1446,6 +1517,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                         \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                         \PYG{o}{\textbar{}}     \PYG{n}{A}\PYG{o}{\textbar{}}  \PYG{n}{B}\PYG{o}{\textbar{}}   \PYG{n}{C}\PYG{o}{\textbar{}}
@@ -1461,6 +1533,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 \label{\detokenize{pdrdd:replace-values}}
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} caution: you need to chose specific col}
 \PYG{n}{dp}\PYG{o}{.}\PYG{n}{A}\PYG{o}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{male}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{female}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{,}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{n}{inplace}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
@@ -1471,6 +1544,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                 \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                 \PYG{o}{\textbar{}}  \PYG{n}{A}\PYG{o}{\textbar{}}  \PYG{n}{B}\PYG{o}{\textbar{}}   \PYG{n}{C}\PYG{o}{\textbar{}}
@@ -1489,6 +1563,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 \label{\detokenize{pdrdd:rename-all-columns}}
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{o}{.}\PYG{n}{columns} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{a}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{c}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{d}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
 \PYG{n}{dp}\PYG{o}{.}\PYG{n}{head}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
@@ -1498,6 +1573,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                                 \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                                 \PYG{o}{\textbar{}}    \PYG{n}{a}\PYG{o}{\textbar{}}   \PYG{n}{b}\PYG{o}{\textbar{}}   \PYG{n}{c}\PYG{o}{\textbar{}}   \PYG{n}{d}\PYG{o}{\textbar{}}
@@ -1513,12 +1589,14 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
 \subsection{Rename one or more columns}
 \label{\detokenize{pdrdd:rename-one-or-more-columns}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{mapping} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Newspaper}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{C}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Sales}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{D}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}}
 \end{sphinxVerbatim}
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{o}{.}\PYG{n}{rename}\PYG{p}{(}\PYG{n}{columns}\PYG{o}{=}\PYG{n}{mapping}\PYG{p}{)}\PYG{o}{.}\PYG{n}{head}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1528,6 +1606,7 @@ Data from: \sphinxurl{http://api.luftdaten.info/static/v1/data.json}
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                         \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                         \PYG{o}{\textbar{}}   \PYG{n}{TV}\PYG{o}{\textbar{}}\PYG{n}{Radio}\PYG{o}{\textbar{}}   \PYG{n}{C}\PYG{o}{\textbar{}}   \PYG{n}{D}\PYG{o}{\textbar{}}
@@ -1545,12 +1624,14 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{ds}\PYG{o}{.}\PYG{n}{withColumnRenamed}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Newspaper}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Paper}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{l+m+mi}{4}
 \end{sphinxVerbatim}
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
 \PYG{o}{\textbar{}}   \PYG{n}{TV}\PYG{o}{\textbar{}}\PYG{n}{Radio}\PYG{o}{\textbar{}}\PYG{n}{Paper}\PYG{o}{\textbar{}}\PYG{n}{Sales}\PYG{o}{\textbar{}}
@@ -1567,12 +1648,14 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \section{Drop Columns}
 \label{\detokenize{pdrdd:drop-columns}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{drop\PYGZus{}name} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Newspaper}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Sales}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
 \end{sphinxVerbatim}
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{o}{.}\PYG{n}{drop}\PYG{p}{(}\PYG{n}{drop\PYGZus{}name}\PYG{p}{,}\PYG{n}{axis}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{o}{.}\PYG{n}{head}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1581,6 +1664,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                 \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                 \PYG{o}{\textbar{}}   \PYG{n}{TV}\PYG{o}{\textbar{}}\PYG{n}{Radio}\PYG{o}{\textbar{}}
@@ -1596,6 +1680,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \section{Filter}
 \label{\detokenize{pdrdd:filter}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{read\PYGZus{}csv}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Advertising.csv}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1606,6 +1691,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{p}{[}\PYG{n}{dp}\PYG{o}{.}\PYG{n}{Newspaper}\PYG{o}{\PYGZlt{}}\PYG{l+m+mi}{20}\PYG{p}{]}\PYG{o}{.}\PYG{n}{head}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1614,6 +1700,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                                 \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                                 \PYG{o}{\textbar{}}   \PYG{n}{TV}\PYG{o}{\textbar{}}\PYG{n}{Radio}\PYG{o}{\textbar{}}\PYG{n}{Newspaper}\PYG{o}{\textbar{}}\PYG{n}{Sales}\PYG{o}{\textbar{}}
@@ -1628,6 +1715,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{p}{[}\PYG{p}{(}\PYG{n}{dp}\PYG{o}{.}\PYG{n}{Newspaper}\PYG{o}{\PYGZlt{}}\PYG{l+m+mi}{20}\PYG{p}{)}\PYG{o}{\PYGZam{}}\PYG{p}{(}\PYG{n}{dp}\PYG{o}{.}\PYG{n}{TV}\PYG{o}{\PYGZgt{}}\PYG{l+m+mi}{100}\PYG{p}{)}\PYG{p}{]}\PYG{o}{.}\PYG{n}{head}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1636,6 +1724,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                                 \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                                 \PYG{o}{\textbar{}}   \PYG{n}{TV}\PYG{o}{\textbar{}}\PYG{n}{Radio}\PYG{o}{\textbar{}}\PYG{n}{Newspaper}\PYG{o}{\textbar{}}\PYG{n}{Sales}\PYG{o}{\textbar{}}
@@ -1653,6 +1742,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 \label{\detokenize{pdrdd:with-new-column}}
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{tv\PYGZus{}norm}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{dp}\PYG{o}{.}\PYG{n}{TV}\PYG{o}{/}\PYG{n+nb}{sum}\PYG{p}{(}\PYG{n}{dp}\PYG{o}{.}\PYG{n}{TV}\PYG{p}{)}
 \PYG{n}{dp}\PYG{o}{.}\PYG{n}{head}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
@@ -1662,6 +1752,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                                 \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                                 \PYG{o}{\textbar{}}   \PYG{n}{TV}\PYG{o}{\textbar{}}\PYG{n}{Radio}\PYG{o}{\textbar{}}\PYG{n}{Newspaper}\PYG{o}{\textbar{}}\PYG{n}{Sales}\PYG{o}{\textbar{}}             \PYG{n}{tv\PYGZus{}norm}\PYG{o}{\textbar{}}
@@ -1676,6 +1767,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{cond}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{dp}\PYG{o}{.}\PYG{n}{apply}\PYG{p}{(}\PYG{k}{lambda} \PYG{n}{c}\PYG{p}{:} \PYG{l+m+mi}{1} \PYG{k}{if} \PYG{p}{(}\PYG{p}{(}\PYG{n}{c}\PYG{o}{.}\PYG{n}{TV}\PYG{o}{\PYGZgt{}}\PYG{l+m+mi}{100}\PYG{p}{)}\PYG{o}{\PYGZam{}}\PYG{p}{(}\PYG{n}{c}\PYG{o}{.}\PYG{n}{Radio}\PYG{o}{\PYGZlt{}}\PYG{l+m+mi}{40}\PYG{p}{)}\PYG{p}{)} \PYG{k}{else} \PYG{l+m+mi}{2} \PYG{k}{if} \PYG{n}{c}\PYG{o}{.}\PYG{n}{Sales}\PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{10} \PYG{k}{else} \PYG{l+m+mi}{3}\PYG{p}{,}\PYG{n}{axis}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1686,6 +1778,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                                 \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                                 \PYG{o}{\textbar{}}   \PYG{n}{TV}\PYG{o}{\textbar{}}\PYG{n}{Radio}\PYG{o}{\textbar{}}\PYG{n}{Newspaper}\PYG{o}{\textbar{}}\PYG{n}{Sales}\PYG{o}{\textbar{}}\PYG{n}{cond}\PYG{o}{\textbar{}}
@@ -1700,6 +1793,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{log\PYGZus{}tv}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{log}\PYG{p}{(}\PYG{n}{dp}\PYG{o}{.}\PYG{n}{TV}\PYG{p}{)}
 \PYG{n}{dp}\PYG{o}{.}\PYG{n}{head}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
@@ -1709,6 +1803,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                                 \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                                 \PYG{o}{\textbar{}}   \PYG{n}{TV}\PYG{o}{\textbar{}}\PYG{n}{Radio}\PYG{o}{\textbar{}}\PYG{n}{Newspaper}\PYG{o}{\textbar{}}\PYG{n}{Sales}\PYG{o}{\textbar{}}            \PYG{n}{log\PYGZus{}tv}\PYG{o}{\textbar{}}
@@ -1723,6 +1818,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{tv+10}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{dp}\PYG{o}{.}\PYG{n}{TV}\PYG{o}{.}\PYG{n}{apply}\PYG{p}{(}\PYG{k}{lambda} \PYG{n}{x}\PYG{p}{:} \PYG{n}{x}\PYG{o}{+}\PYG{l+m+mi}{10}\PYG{p}{)}
 \PYG{n}{dp}\PYG{o}{.}\PYG{n}{head}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
@@ -1732,6 +1828,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                                 \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                                 \PYG{o}{\textbar{}}   \PYG{n}{TV}\PYG{o}{\textbar{}}\PYG{n}{Radio}\PYG{o}{\textbar{}}\PYG{n}{Newspaper}\PYG{o}{\textbar{}}\PYG{n}{Sales}\PYG{o}{\textbar{}}\PYG{n}{tv}\PYG{o}{+}\PYG{l+m+mi}{10}\PYG{o}{\textbar{}}
@@ -1747,6 +1844,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \section{Join}
 \label{\detokenize{pdrdd:join}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{leftp} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A0}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A1}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A2}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A3}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{,}
                     \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B0}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B1}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B2}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B3}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{,}
@@ -1764,6 +1862,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 \PYG{n}{rights} \PYG{o}{=} \PYG{n}{spark}\PYG{o}{.}\PYG{n}{createDataFrame}\PYG{p}{(}\PYG{n}{rightp}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
     \PYG{n}{A}   \PYG{n}{B}   \PYG{n}{C}   \PYG{n}{D}                   \PYG{n}{A}   \PYG{n}{F}   \PYG{n}{G}   \PYG{n}{H}
 \PYG{l+m+mi}{0}  \PYG{n}{A0}  \PYG{n}{B0}  \PYG{n}{C0}  \PYG{n}{D0}               \PYG{l+m+mi}{4}  \PYG{n}{A0}  \PYG{n}{B4}  \PYG{n}{C4}  \PYG{n}{D4}
@@ -1777,6 +1876,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 \label{\detokenize{pdrdd:left-join}}
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{leftp}\PYG{o}{.}\PYG{n}{merge}\PYG{p}{(}\PYG{n}{rightp}\PYG{p}{,}\PYG{n}{on}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{how}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{left}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1786,6 +1886,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                         \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                         \PYG{o}{\textbar{}}  \PYG{n}{A}\PYG{o}{\textbar{}}  \PYG{n}{B}\PYG{o}{\textbar{}}  \PYG{n}{C}\PYG{o}{\textbar{}}  \PYG{n}{D}\PYG{o}{\textbar{}}   \PYG{n}{F}\PYG{o}{\textbar{}}   \PYG{n}{G}\PYG{o}{\textbar{}}   \PYG{n}{H}\PYG{o}{\textbar{}}
@@ -1802,6 +1903,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 \label{\detokenize{pdrdd:right-join}}
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{leftp}\PYG{o}{.}\PYG{n}{merge}\PYG{p}{(}\PYG{n}{rightp}\PYG{p}{,}\PYG{n}{on}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{how}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{right}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1811,6 +1913,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                         \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                         \PYG{o}{\textbar{}}  \PYG{n}{A}\PYG{o}{\textbar{}}   \PYG{n}{B}\PYG{o}{\textbar{}}   \PYG{n}{C}\PYG{o}{\textbar{}}   \PYG{n}{D}\PYG{o}{\textbar{}}  \PYG{n}{F}\PYG{o}{\textbar{}}  \PYG{n}{G}\PYG{o}{\textbar{}}  \PYG{n}{H}\PYG{o}{\textbar{}}
@@ -1827,6 +1930,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 \label{\detokenize{pdrdd:inner-join}}
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{leftp}\PYG{o}{.}\PYG{n}{merge}\PYG{p}{(}\PYG{n}{rightp}\PYG{p}{,}\PYG{n}{on}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{how}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{inner}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1836,6 +1940,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                 \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                 \PYG{o}{\textbar{}}  \PYG{n}{A}\PYG{o}{\textbar{}}  \PYG{n}{B}\PYG{o}{\textbar{}}  \PYG{n}{C}\PYG{o}{\textbar{}}  \PYG{n}{D}\PYG{o}{\textbar{}}  \PYG{n}{F}\PYG{o}{\textbar{}}  \PYG{n}{G}\PYG{o}{\textbar{}}  \PYG{n}{H}\PYG{o}{\textbar{}}
@@ -1850,6 +1955,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 \label{\detokenize{pdrdd:full-join}}
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{leftp}\PYG{o}{.}\PYG{n}{merge}\PYG{p}{(}\PYG{n}{rightp}\PYG{p}{,}\PYG{n}{on}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{how}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{full}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1859,6 +1965,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                         \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                         \PYG{o}{\textbar{}}  \PYG{n}{A}\PYG{o}{\textbar{}}   \PYG{n}{B}\PYG{o}{\textbar{}}   \PYG{n}{C}\PYG{o}{\textbar{}}   \PYG{n}{D}\PYG{o}{\textbar{}}   \PYG{n}{F}\PYG{o}{\textbar{}}   \PYG{n}{G}\PYG{o}{\textbar{}}   \PYG{n}{H}\PYG{o}{\textbar{}}
@@ -1875,6 +1982,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \section{Concat Columns}
 \label{\detokenize{pdrdd:concat-columns}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{my\PYGZus{}list} \PYG{o}{=} \PYG{p}{[}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{a}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{)}\PYG{p}{,}
            \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{)}\PYG{p}{,}
@@ -1888,6 +1996,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 \PYG{n}{ds} \PYG{o}{=} \PYG{n}{spark}\PYG{o}{.}\PYG{n}{createDataFrame}\PYG{p}{(}\PYG{n}{my\PYGZus{}list}\PYG{p}{,}\PYG{n}{schema}\PYG{o}{=}\PYG{n}{col\PYGZus{}name}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
   \PYG{n}{col1}  \PYG{n}{col2}  \PYG{n}{col3}
 \PYG{l+m+mi}{0}    \PYG{n}{a}     \PYG{l+m+mi}{2}     \PYG{l+m+mi}{3}
@@ -1900,6 +2009,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{concat}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{dp}\PYG{o}{.}\PYG{n}{apply}\PYG{p}{(}\PYG{k}{lambda} \PYG{n}{x}\PYG{p}{:}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{\PYGZpc{}}\PYG{p}{(}\PYG{n}{x}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{col1}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{,}\PYG{n}{x}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{col2}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}\PYG{p}{,}\PYG{n}{axis}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
 \PYG{n}{dp}
@@ -1909,6 +2019,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                         \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                         \PYG{o}{\textbar{}}\PYG{n}{col1}\PYG{o}{\textbar{}}\PYG{n}{col2}\PYG{o}{\textbar{}}\PYG{n}{col3}\PYG{o}{\textbar{}}\PYG{n}{concat}\PYG{o}{\textbar{}}
@@ -1927,6 +2038,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 \label{\detokenize{pdrdd:groupby}}
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{o}{.}\PYG{n}{groupby}\PYG{p}{(}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{col1}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}\PYG{o}{.}\PYG{n}{agg}\PYG{p}{(}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{col2}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{min}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{col3}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{mean}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1935,6 +2047,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                         \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
       \PYG{n}{col2}  \PYG{n}{col3}                        \PYG{o}{\textbar{}}\PYG{n}{col1}\PYG{o}{\textbar{}}\PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{col2}\PYG{p}{)}\PYG{o}{\textbar{}}\PYG{n}{avg}\PYG{p}{(}\PYG{n}{col3}\PYG{p}{)}\PYG{o}{\textbar{}}
@@ -1950,6 +2063,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 \label{\detokenize{pdrdd:pivot}}
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{pd}\PYG{o}{.}\PYG{n}{pivot\PYGZus{}table}\PYG{p}{(}\PYG{n}{dp}\PYG{p}{,} \PYG{n}{values}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{col3}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{index}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{col1}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{columns}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{col2}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{aggfunc}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{}}
@@ -1958,6 +2072,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                 \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
 \PYG{n}{col2}    \PYG{l+m+mi}{2}     \PYG{l+m+mi}{5}     \PYG{l+m+mi}{8}           \PYG{o}{\textbar{}}\PYG{n}{col1}\PYG{o}{\textbar{}}   \PYG{l+m+mi}{2}\PYG{o}{\textbar{}}   \PYG{l+m+mi}{5}\PYG{o}{\textbar{}}   \PYG{l+m+mi}{8}\PYG{o}{\textbar{}}
@@ -1971,6 +2086,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \section{Unixtime to Date}
 \label{\detokenize{pdrdd:unixtime-to-date}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k+kn}{from} \PYG{n+nn}{datetime} \PYG{k+kn}{import} \PYG{n}{datetime}
 
@@ -1983,6 +2099,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Python Code:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{dp}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{datetime}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{to\PYGZus{}datetime}\PYG{p}{(}\PYG{n}{dp}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{ts}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{,} \PYG{n}{unit}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{s}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{dt}\PYG{o}{.}\PYG{n}{tz\PYGZus{}localize}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{UTC}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \PYG{n}{dp}
@@ -1994,6 +2111,7 @@ You can also use \sphinxcode{\sphinxupquote{withColumnRenamed}} to rename one co
 
 \sphinxcode{\sphinxupquote{:: Comparison:}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                                                 \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
                                                 \PYG{o}{\textbar{}}  \PYG{n}{A}\PYG{o}{\textbar{}}        \PYG{n}{ts}\PYG{o}{\textbar{}}               \PYG{n}{date}\PYG{o}{\textbar{}}
@@ -2025,6 +2143,7 @@ structure and the directory structure of this package are as follows.
 
 \section{Hierarchical Structure}
 \label{\detokenize{pack:hierarchical-structure}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 ├── README.md
 ├── \PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}.py
@@ -2047,6 +2166,7 @@ From the above hierarchical structure, you will find that you have to have \sphi
 
 \section{Set Up}
 \label{\detokenize{pack:set-up}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k+kn}{from} \PYG{n+nn}{setuptools} \PYG{k+kn}{import} \PYG{n}{setup}\PYG{p}{,} \PYG{n}{find\PYGZus{}packages}
 
@@ -2086,6 +2206,7 @@ From the above hierarchical structure, you will find that you have to have \sphi
 
 \section{Requirements}
 \label{\detokenize{pack:requirements}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 pandas
 numpy
@@ -2097,6 +2218,7 @@ matplotlib
 
 \section{ReadMe}
 \label{\detokenize{pack:readme}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} StatsPy}
 
@@ -2143,6 +2265,7 @@ If you do not have a PyPI accout, you need to register an account at \sphinxurl{
 
 \section{Install \sphinxstyleliteralintitle{\sphinxupquote{twine}}}
 \label{\detokenize{pypi:install-twine}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 pip install twine
 \end{sphinxVerbatim}
@@ -2150,12 +2273,14 @@ pip install twine
 
 \section{Build Your Package}
 \label{\detokenize{pypi:build-your-package}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{python} \PYG{n}{setup}\PYG{o}{.}\PYG{n}{py} \PYG{n}{sdist} \PYG{n}{bdist\PYGZus{}wheel}
 \end{sphinxVerbatim}
 
 Then you will get a new folder \sphinxcode{\sphinxupquote{dist}}:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 .
 ├── PyAudit\PYGZhy{}1.0\PYGZhy{}py3\PYGZhy{}none\PYGZhy{}any.whl
@@ -2166,12 +2291,14 @@ Then you will get a new folder \sphinxcode{\sphinxupquote{dist}}:
 
 \section{Upload Your Package}
 \label{\detokenize{pypi:upload-your-package}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 twine upload dist/*
 \end{sphinxVerbatim}
 
 During the uploading processing, you need to provide your PyPI account \sphinxcode{\sphinxupquote{username}} and \sphinxcode{\sphinxupquote{password}}:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 Enter your username: runawayhorse001
 Enter your password:
@@ -2182,6 +2309,7 @@ Enter your password:
 \label{\detokenize{pypi:package-at-pypi}}
 Here is my \sphinxcode{\sphinxupquote{PyAudit}} package at {[}PyPI{]}(\sphinxurl{https://pypi.org/project/PyAudit}). You can install \sphinxcode{\sphinxupquote{PyAudit}} using:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 pip install PyAudit
 \end{sphinxVerbatim}
@@ -2194,6 +2322,7 @@ In this chapter, you’ll learn how to deployment your model with \sphinxcode{\s
 
 \section{Install \sphinxstyleliteralintitle{\sphinxupquote{flask}}}
 \label{\detokenize{deploy:install-flask}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 pip install Flask
 \end{sphinxVerbatim}
@@ -2203,6 +2332,7 @@ pip install Flask
 \label{\detokenize{deploy:train-and-save-your-model}}
 You can use the following code to train and save your \sphinxcode{\sphinxupquote{CNN}} model:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{}python 2/3 compatibility}
 \PYG{k+kn}{from} \PYG{n+nn}{\PYGZus{}\PYGZus{}future\PYGZus{}\PYGZus{}} \PYG{k+kn}{import} \PYG{n}{print\PYGZus{}function}
@@ -2310,6 +2440,7 @@ You can use the following code to train and save your \sphinxcode{\sphinxupquote
 
 \section{Deplyment with Flask}
 \label{\detokenize{deploy:deplyment-with-flask}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{}our web app framework!}
 
@@ -2412,6 +2543,7 @@ You can use the following code to train and save your \sphinxcode{\sphinxupquote
 
 \subsection{1. Lunch the APP}
 \label{\detokenize{deploy:lunch-the-app}}
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{python} \PYG{n}{app}\PYG{o}{.}\PYG{n}{py}
 \end{sphinxVerbatim}

@@ -1,4 +1,4 @@
-\babel@toc {english}{}
+\select@language {english}
 \contentsline {chapter}{\numberline {1}Preface}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}About}{3}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}About this note}{3}{subsection.1.1.1}
@@ -100,6 +100,6 @@
 \contentsline {section}{\numberline {15.2}Tests Module}{72}{section.15.2}
 \contentsline {subsection}{\numberline {15.2.1}\sphinxstyleliteralintitle {\sphinxupquote {T-test}}}{72}{subsection.15.2.1}
 \contentsline {chapter}{\numberline {16}Main Reference}{75}{chapter.16}
-\contentsline {chapter}{Bibliography}{77}{chapter*.5}
-\contentsline {chapter}{Python Module Index}{79}{section*.6}
-\contentsline {chapter}{Index}{81}{section*.7}
+\contentsline {chapter}{Bibliography}{77}{chapter*.6}
+\contentsline {chapter}{Python Module Index}{79}{section*.7}
+\contentsline {chapter}{Index}{81}{section*.8}
